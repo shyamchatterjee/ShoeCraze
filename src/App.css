@@ -1,0 +1,94 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family:"Poppins", sans-serif; 
+}
+body{
+  background-color: #eaeaea;
+}
+#root{
+  
+  width: 100%;
+  height: 100vh;
+   
+   display: flex;
+   flex-direction: column;
+}
+.nav{
+
+  padding: 1rem;
+  width: 100%;
+  background-color: #FFFF;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+a{
+  text-decoration: none;
+    font-size: 20px;
+    color: black;
+}
+.container{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.mini-container{
+  padding: 1rem;
+  background-color: #FFFF;
+  margin-top: 50px;
+  width: 70%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+ 
+ 
+}
+.shoop-now-button{
+    background-color: black;
+    color: white;
+    border: none;
+    width: 200px;
+    height: 50px;
+    cursor: pointer;
+}
+.second-part{
+  display: flex;
+    flex-direction: column;
+  gap: 1rem;
+  
+}
+.frist-part{
+  display: flex;
+  flex-direction: column;
+    font-size: 30px;
+}
+.heading-container{
+  margin-top: 1rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+}
+.product-container{
+  padding: 15px;
+  margin-top: 1rem;
+    width: 100%;
+     display: flex;
+     flex-direction: row;
+     gap: 1rem;
+     flex-wrap: wrap;
+  
+}
+.product{
+
+  width: 200px;
+  background-color: #FFFF;
+ padding: 1rem;
+ display: flex;
+ flex-direction: column;
+ gap: 1rem;
+ border-radius: 1rem;
+}
