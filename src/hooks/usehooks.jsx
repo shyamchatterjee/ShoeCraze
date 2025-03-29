@@ -12,6 +12,7 @@ let UseHooks= ()=>{
            getApi()
      },[])
     
+    
      return ({array})
 }
 export default UseHooks

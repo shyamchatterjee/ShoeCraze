@@ -1,22 +1,29 @@
-import { data, Link } from "react-router"
+import { Link } from "react-router"
 import { CiShoppingCart } from "react-icons/ci";
-import UseHooks from "../hooks/usehooks";
-import Addproduct from "./addproduct";
-import { useContext } from "react";
+import { api } from "../contast/contast";
+import { useContext, useEffect, useState } from "react";
 import { Context } from "../context/context";
-
-let Product = ()=>{
-       let {data} = useContext(Context)
-  
+import CartButton from "./buttonadd";
+let Adidas = ()=>{
+    let [array,setArray] = useState([])
+    let {addCart,data} = useContext(Context)
+      let getApi = ()=>{
+        api.get("/product?name="+"ADIDAS").then((value)=>{
+               setArray(value.data)
+        })
+      }
+      useEffect(()=>{
+          getApi()
+      },[])
     return <> <div className="nav">
     <Link to="/">Home</Link>
     <Link to="/product">See All</Link>
     <Link to="/men">Men</Link>
     <Link to="/women">Women</Link>
     <div className="cart-img">
-  <Link to="/cart"><CiShoppingCart style={{fontSize:"35px"}}/></Link>
-   <p className={data.length==0?"hide":"color"} >{data.length}</p>  
-   </div>
+<Link to="/cart"><CiShoppingCart style={{fontSize:"35px"}}/></Link> 
+<p className={data.length==0?"hide":"color"} >{data.length}</p>  
+</div> 
 </div>
 
   <div className="heading-container">
@@ -33,7 +40,19 @@ let Product = ()=>{
       <Link to="/woodland"><img src="https://seeklogo.com/images/W/woodland-logo-0EC7F57B3B-seeklogo.com.png"  height="60px"  width="60px"   alt="" /></Link>
 
  </div>
-  <Addproduct/>
+ <div className="product-container">
+ {array.map((element)=>{
+                   return <Link to={"/product/"+element.id}> <div className="product">
+                          <img src={element.img} width="200px" height="200px" alt="" />
+                          <p style={{fontSize:"20px"}}>{element.name}</p >
+                          <p>{"Rs." + element.price}</p>
+                          <p>{element.description}</p>
+                          <p>{element.ratting}</p>
+                            <CartButton  element={element}/>
+                   </div> </Link>
+               })}
+ </div>
+  
 </>
 }
-export default Product
+export default Adidas
