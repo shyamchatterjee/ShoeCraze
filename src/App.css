@@ -159,4 +159,12 @@ a{
 }
 .color{
   color: black;
+  font-size: 10px;
+}
+#search-input{
+    width: 400px;
+    padding: 6px;
+    outline: 1px solid blue;
+  
+     
 }

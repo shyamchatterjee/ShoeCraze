@@ -5,18 +5,16 @@ import { useContext, useEffect, useState } from "react";
 import { api } from "../contast/contast";
 import { Context } from "../context/context";
 import CartButton from "./buttonadd";
+import Search from "./searchcomponent";
 
 let Women = ()=>{
-  let [array,setArray] = useState([])
+let {array} = UseHooks()
   let {addCart,data} = useContext(Context)
-    useEffect(()=>{
-          api.get(("/product?category="+"women")).then((value)=>{
-                  setArray(value.data)
-          })
-    },[])
+   
     return <> <div className="nav">
     <Link to="/">Home</Link>
     <Link to="/product">See All</Link>
+    <Search/>
     <Link to="/men">Men</Link>
     <Link to="/women">Women</Link>
     <div className="cart-img">
@@ -33,6 +31,8 @@ let Women = ()=>{
 </div>
 <div className="product-container">
 {array.map((element)=>{
+            if (element.category=="women") {
+              
             
                   return <Link to={"/women/product/"+element.id}>  <div className="product">
                   <img src={element.img} width="200px" height="200px" alt="" />
@@ -42,8 +42,10 @@ let Women = ()=>{
                   <p>{element.ratting}</p>
                   <CartButton element={element}/>
            </div> </Link>
+            }
                 
               })}
+            
 </div>
 </>
 }

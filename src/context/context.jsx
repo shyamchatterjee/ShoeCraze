@@ -5,6 +5,7 @@ import { createContext, useState } from "react";
     let [data,setData] = useState([])
     let [boolen,setBoolen] = useState(true)
     let [img,setimg] = useState("")
+    let [array,setArray] = useState([])
     let clickImg =(item)=>{
            setimg(item)
            setBoolen(false)

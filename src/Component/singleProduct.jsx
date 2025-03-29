@@ -5,6 +5,7 @@ import { useContext, useEffect, useState } from "react";
 import { api } from "../contast/contast";
 import { Context } from "../context/context";
 import CartButton from "./buttonadd";
+import Search from "./searchcomponent";
 let SingleProduct = ()=>{
        let {addCart,data,img,boolen,clickImg} = useContext(Context)
     let perams = useParams()
@@ -20,6 +21,7 @@ let SingleProduct = ()=>{
     return <> <div className="nav">
     <Link to="/">Home</Link>
     <Link to="/product">See All</Link>
+    
     <Link to="/men">Men</Link>
     <Link to="/women">Women</Link>
     <div className="cart-img">

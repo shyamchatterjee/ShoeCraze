@@ -4,6 +4,7 @@ import UseHooks from "../hooks/usehooks";
 import Addproduct from "./addproduct";
 import { useContext } from "react";
 import { Context } from "../context/context";
+import Search from "./searchcomponent";
 
 let Product = ()=>{
        let {data} = useContext(Context)
@@ -11,7 +12,9 @@ let Product = ()=>{
     return <> <div className="nav">
     <Link to="/">Home</Link>
     <Link to="/product">See All</Link>
+    <Search/>
     <Link to="/men">Men</Link>
+
     <Link to="/women">Women</Link>
     <div className="cart-img">
   <Link to="/cart"><CiShoppingCart style={{fontSize:"35px"}}/></Link>

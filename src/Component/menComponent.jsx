@@ -4,6 +4,7 @@ import UseHooks from "../hooks/usehooks";
 import { useContext } from "react";
 import { Context } from "../context/context";
 import CartButton from "./buttonadd";
+import Search from "./searchcomponent";
 
 let Men = ()=>{
        let {array} =   UseHooks()
@@ -11,6 +12,7 @@ let Men = ()=>{
     return <> <div className="nav">
     <Link to="/">Home</Link>
     <Link to="/product">See All</Link>
+    <Search/>
     <Link to="/men">Men</Link>
     <Link to="/women">Women</Link>
     <div className="cart-img">
