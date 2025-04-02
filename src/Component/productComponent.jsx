@@ -5,11 +5,16 @@ import Addproduct from "./addproduct";
 import { useContext } from "react";
 import { Context } from "../context/context";
 import Search from "./searchcomponent";
+import Chekbox from "./chekbox";
 
 let Product = ()=>{
        let {data} = useContext(Context)
   
     return <> <div className="nav">
+       <div className="website-name-container">
+                             <img src="https://th.bing.com/th/id/OIP.M6n_U53so7bRHBmLm7d--QHaHa?rs=1&pid=ImgDetMain" height="25px" alt="" />
+                             <p style={{fontSize:"15px"}}>ShoeCraze</p>
+                     </div>
     <Link to="/">Home</Link>
     <Link to="/product">See All</Link>
     <Search/>
@@ -24,8 +29,9 @@ let Product = ()=>{
 
   <div className="heading-container">
     
-    
+  
         <img src="https://highongloss.com/wp-content/uploads/2021/04/5-Must-Have-Shoes-Men-Women-scaled.jpg" width="600px" height="400px" alt="" />
+       
   </div>
   <div className="brand-name-container">
     <Link to="/product">See All Product</Link>
@@ -36,7 +42,10 @@ let Product = ()=>{
       <Link to="/woodland"><img src="https://seeklogo.com/images/W/woodland-logo-0EC7F57B3B-seeklogo.com.png"  height="60px"  width="60px"   alt="" /></Link>
 
  </div>
+ <div className="chekbox-product">
+ <Chekbox/>
   <Addproduct/>
+  </div>
 </>
 }
 export default Product

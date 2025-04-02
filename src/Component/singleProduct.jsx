@@ -19,6 +19,10 @@ let SingleProduct = ()=>{
    
       
     return <> <div className="nav">
+         <div className="website-name-container">
+                             <img src="https://th.bing.com/th/id/OIP.M6n_U53so7bRHBmLm7d--QHaHa?rs=1&pid=ImgDetMain" height="25px" alt="" />
+                             <p style={{fontSize:"15px"}}>ShoeCraze</p>
+                     </div>
     <Link to="/">Home</Link>
     <Link to="/product">See All</Link>
     

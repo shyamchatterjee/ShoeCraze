@@ -7,6 +7,7 @@ let UseHooks= ()=>{
    let [array,setArray] = useState([])
    let [search,setsearch] = useSearchParams()
    let productname = search.get("productname")
+   
   
  
      let getApi = ()=>{
@@ -35,6 +36,9 @@ let UseHooks= ()=>{
             
             }
       },[productname])
+    
+  
+
     
      return ({getApi,array,setArray,setsearch})
 }

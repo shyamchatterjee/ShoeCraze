@@ -168,3 +168,22 @@ a{
   
      
 }
+.website-name-container{
+  display: flex;
+  align-items: center;
+}
+.chek{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.chek-container{
+  margin-top: 1rem;
+  display: flex;
+  gap: 1rem;
+  margin-left: 50px;
+}
+.chekbox-product{
+  display: flex;
+
+}

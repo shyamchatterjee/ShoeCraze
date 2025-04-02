@@ -12,6 +12,13 @@ import Nike from './nikeComponent';
 import Reebok from './reebokcomponent';
 import SingleProduct from './singleProduct';
 import ContextFuntion from '../context/context';
+import Frist from './price1000-2000';
+import Second from './price2000-3000';
+import Third from './price3000-4000.jsx';
+import Last from './price4000-5000';
+import Secondprice from './price2000-3000';
+import Thirdprice from './price3000-4000.jsx';
+import Lastprice from './price4000-5000';
 function App() {
   return  <BrowserRouter>
   <ContextFuntion>
@@ -30,7 +37,10 @@ function App() {
        <Route path='/product/:productid' element={<SingleProduct/>}  />
        <Route path='/women/product/:productid' element={<SingleProduct/>}  />
        <Route path='/men/product/:productid' element={<SingleProduct/>}  />
-
+          <Route path='/frist' element={<Frist/>}    />
+          <Route path='/second' element={<Secondprice/>}    />
+          <Route  path='/third' element={<Thirdprice/>}/>
+          <Route path='/last' element={<Lastprice/>}/>
   </Routes>
   </ContextFuntion>
   </BrowserRouter>
