@@ -5,7 +5,7 @@ import { Context } from "../context/context";
 import { CiCircleRemove } from "react-icons/ci";
 
 let Cart = ()=>{
-  let {data,removeItem} = useContext(Context)
+  let {data,removeItem,plusFuntion,nagitiveFuntion} = useContext(Context)
      console.log(data)
     return <>  <div className="nav">
        <div className="website-name-container">
@@ -25,7 +25,9 @@ let Cart = ()=>{
                     <img src={element.img} height="100px" width="100px" alt="" />
                      <p style={{fontSize:"25px"}}>{element.name}</p>
                      <p style={{fontSize:"15px"}}>{ "Rs. "+ element.price}</p>
+                     <button  className="plush"  onClick={(e)=>{  e.preventDefault(),  plusFuntion(element)}}>+</button>
                      <p  style={{fontSize:"15px"}}>{"Quantity:" + element.q}</p>
+                     <button className="nagitive"   onClick={(e)=>{ e.preventDefault(),   nagitiveFuntion(element)}}  >-</button>
                      <p  style={{fontSize:"15px"}}>{"Total: "+ "Rs." + element.price*element.q}</p>
                      <CiCircleRemove onClick={(e)=>{e.preventDefault(),removeItem(element)}}  style={{cursor:"pointer",fontSize:"30px"}} />
              </div> </Link>

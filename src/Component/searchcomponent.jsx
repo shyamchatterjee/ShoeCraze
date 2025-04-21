@@ -8,7 +8,7 @@ let Search = ()=>{
      let {setsearch,setname} = UseHooks()
     
        let changeName = (e)=>{
-             setsearch({productname:e.target.value})
+             setsearch({Search:e.target.value})
             
              
        }

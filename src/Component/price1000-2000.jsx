@@ -6,6 +6,7 @@ import UseHooks from "../hooks/usehooks";
 import { api } from "../contast/contast";
 import CartButton from "./buttonadd";
 import Chekbox from "./chekbox";
+import Search from "./searchcomponent";
 
 let Frist = ()=>{
     let {data} = useContext(Context)

@@ -6,6 +6,7 @@ import { api } from "../contast/contast";
 import { Context } from "../context/context";
 import CartButton from "./buttonadd";
 import Search from "./searchcomponent";
+import Chekbox from "./chekbox";
 
 let Women = ()=>{
 let {array} = UseHooks()
@@ -33,6 +34,7 @@ let {array} = UseHooks()
   </div>
         <img src="https://th.bing.com/th/id/OIP.dcXbkibZD39gzEFL1HL4rgHaHa?w=800&h=800&rs=1&pid=ImgDetMain" width="600px" height="400px" alt="" />
 </div>
+
 <div className="product-container">
 {array.map((element)=>{
             if (element.category=="women") {
@@ -51,6 +53,7 @@ let {array} = UseHooks()
               })}
             
 </div>
+
 </>
 }
 export default Women

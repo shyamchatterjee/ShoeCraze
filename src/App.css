@@ -145,7 +145,8 @@ a{
   gap: 1rem;
 }
 .cart{
-  background-color: #FFFF;
+   background-color: black; 
+   color: #FFFF;
   padding: 10px;
   display: flex;
   gap: 1rem;
@@ -186,4 +187,23 @@ a{
 .chekbox-product{
   display: flex;
 
+}
+.plush{
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    border: none;
+    background-color: #FFFF;
+    color: green;
+    cursor: pointer;
+}
+.nagitive{
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  border: none;
+    /* background-color: black; */
+    color: green;
+    background-color: #FFFF;
+    cursor: pointer;
 }

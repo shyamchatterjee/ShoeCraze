@@ -55,8 +55,47 @@ import { createContext, useState } from "react";
           })
            setData(removeProduct)
        }
+        let plusFuntion = (element)=>{
+            let findItem = data.find((item)=>{
+                  if (item.id==element.id) {
+                        return element
+                  }
+            })
+            if (findItem) {
+                 let filteritem = data.filter((item)=>{
+                       if (item.id!==element.id) {
+                            return element
+                       }
+                 })
+                  setData([...filteritem,{...findItem,q:findItem.q+1}])
+            }else{
+                setData([...data,{...element,q:1}])
+            }
+        }
+        let nagitiveFuntion = (element)=>{
+            if (element.q==0) {
+                    ""
+            }else{
 
-         return <Context.Provider  value={{addCart,data,boolen,img,clickImg,removeItem}}>
+            
+            let findItem = data.find((item)=>{
+                  if (item.id==element.id) {
+                        return element
+                  }
+            })
+            if (findItem) {
+                 let filteritem = data.filter((item)=>{
+                       if (item.id!==element.id) {
+                            return element
+                       }
+                 })
+                  setData([...filteritem,{...findItem,q:findItem.q-1}])
+            }else{
+                setData([...data,{...element,q:1}])
+            }
+      }
+        }
+         return <Context.Provider  value={{addCart,data,boolen,img,clickImg,removeItem,plusFuntion,nagitiveFuntion}}>
                 {children}
           </Context.Provider>
  }

@@ -2,6 +2,19 @@ import { Link } from "react-router"
 import { FaRegWindowRestore } from "react-icons/fa6";
 
 let Home = ()=>{
+
+
+      let obj = {
+           name : "shyam",
+            getage(){
+               return 22 + this.name
+            },
+           getname : ()=>{
+               return "my name is shyam"
+           }
+
+      }
+      console.log(obj.getname())
     return  <div  className="container">
                  <div className="mini-container">
                  

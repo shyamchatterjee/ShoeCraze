@@ -6,7 +6,7 @@ import { useNavigate, useSearchParams } from "react-router"
 let UseHooks= ()=>{
    let [array,setArray] = useState([])
    let [search,setsearch] = useSearchParams()
-   let productname = search.get("productname")
+   let Search = search.get("Search")
    
   
  
@@ -23,11 +23,11 @@ let UseHooks= ()=>{
      
      },[])
       useEffect(()=>{
-            if (productname=="") {
+            if (Search=="") {
                getApi()
             }else{
                  let filterItem = array.filter((element)=>{
-                  if (element.name.toLowerCase().includes(productname.toLowerCase())||element.description.toLowerCase().includes(productname.toLowerCase())) {
+                  if (element.name.toLowerCase().includes(Search.toLowerCase())||element.description.toLowerCase().includes(Search.toLowerCase())) {
                          return element
                   }
                  })
@@ -35,7 +35,7 @@ let UseHooks= ()=>{
                
             
             }
-      },[productname])
+      },[Search])
     
   
 

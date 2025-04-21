@@ -5,6 +5,7 @@ import { useContext } from "react";
 import { Context } from "../context/context";
 import CartButton from "./buttonadd";
 import Search from "./searchcomponent";
+import Chekbox from "./chekbox";
 
 let Men = ()=>{
        let {array} =   UseHooks()
@@ -31,6 +32,7 @@ let Men = ()=>{
   </div>
         <img src="https://th.bing.com/th/id/OIP.vXF3D9onL5W6FyjDbTquLAHaHa?rs=1&pid=ImgDetMain" width="600px" height="400px" alt="" />
 </div>
+
    <div className="product-container">
               {array.map((element)=>{
                 if (element.category=="men") {
@@ -45,6 +47,7 @@ let Men = ()=>{
                 }
               })}
    </div>
+   
 </>
 }
 export default Men
