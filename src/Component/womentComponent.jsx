@@ -17,11 +17,13 @@ let {array} = UseHooks()
                              <img src="https://th.bing.com/th/id/OIP.M6n_U53so7bRHBmLm7d--QHaHa?rs=1&pid=ImgDetMain" height="25px" alt="" />
                              <p style={{fontSize:"15px"}}>ShoeCraze</p>
                      </div>
-    <Link to="/">Home</Link>
+    <Link to="/home">Home</Link>
     <Link to="/product">See All</Link>
     <Search/>
     <Link to="/men">Men</Link>
     <Link to="/women">Women</Link>
+    <Link to="/acount"><img src="https://static.vecteezy.com/system/resources/previews/007/033/146/original/profile-icon-login-head-icon-vector.jpg" height={20} width={20} alt="" /></Link>
+ 
     <div className="cart-img">
 <Link to="/cart"><CiShoppingCart style={{fontSize:"35px"}}/></Link> 
 <p className={data.length==0?"hide":"color"} >{data.length}</p>  

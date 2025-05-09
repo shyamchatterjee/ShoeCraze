@@ -19,12 +19,14 @@ import Last from './price4000-5000';
 import Secondprice from './price2000-3000';
 import Thirdprice from './price3000-4000.jsx';
 import Lastprice from './price4000-5000';
+import Login from './logincomponent.jsx';
+import Acount from './loginacount.jsx';
 function App() {
   return  <BrowserRouter>
   <ContextFuntion>
   <Routes>
        
-       <Route path='/'  element={<Home/>} />
+       <Route path='/home'  element={<Home/>} />
        <Route path='/cart' element={<Cart/>} />
        <Route path='/product' element={<Product/>}/>
        <Route path='/men' element={<Men/>}/>
@@ -41,6 +43,8 @@ function App() {
           <Route path='/second' element={<Secondprice/>}    />
           <Route  path='/third' element={<Thirdprice/>}/>
           <Route path='/last' element={<Lastprice/>}/>
+          <Route  path='/'  element={<Login/>} />
+          <Route  path='/acount'  element={<Acount/>} />
   </Routes>
   </ContextFuntion>
   </BrowserRouter>

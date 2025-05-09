@@ -15,7 +15,22 @@ let Home = ()=>{
 
       }
       console.log(obj.getname())
-    return  <div  className="container">
+    return <> <div className="nav">
+    <div className="website-name-container">
+                          <img src="https://th.bing.com/th/id/OIP.M6n_U53so7bRHBmLm7d--QHaHa?rs=1&pid=ImgDetMain" height="25px" alt="" />
+                          <p style={{fontSize:"15px"}}>ShoeCraze</p>
+                  </div>
+ <Link to="/home">Home</Link>
+ <Link to="/product">See All</Link>
+ 
+ <Link to="/men">Men</Link>
+
+ <Link to="/women">Women</Link>
+ <Link to="/acount"><img src="https://static.vecteezy.com/system/resources/previews/007/033/146/original/profile-icon-login-head-icon-vector.jpg" height={20} width={20} alt="" /></Link>
+ 
+
+</div>
+      <div  className="container">
                  <div className="mini-container">
                  
                     <div className="second-part">
@@ -34,5 +49,7 @@ let Home = ()=>{
                   
                  </div>
       </div>
+    
+       </>
 }
 export default Home
